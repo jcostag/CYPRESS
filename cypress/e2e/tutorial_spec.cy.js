@@ -3,7 +3,7 @@ describe('template spec', () => {
   it('passes', () => {
     //cy.visit('https://example.cypress.io')
     //cy.visit('https://demo.oscommerce.com/watch/')
-    cy.visit('https://sqademosatp.net/watch/')
+  cy.visit('https://sqademosatp.net/watch/')
 
 
 
@@ -11,6 +11,8 @@ describe('template spec', () => {
 
     // Royal London 41003-03
     // Citizen Men's BJ8050-08E Eco-Drive Professional Diver Black Sport Watch
+    // Citizen Eco-Drive Silver Tone Men
+
     // Citizen Eco-Drive Silver Tone Men
 
 

@@ -40,6 +40,7 @@ build/Release
 
 # Dependency directories
 cypress/screenshots/
+cypress/videos/
 node_modules/
 jspm_packages/
 

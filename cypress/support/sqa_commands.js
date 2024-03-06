@@ -1,10 +1,11 @@
-Cypress.Commands.add("sqa_addToBasket", (product) => {
-   cy.get("a").contains(product).click();
+Cypress.Commands.add("sqa_addToCart", (name) => {
+   cy.get("a").contains(name).click();
    cy.get(".customers-activity > .close").click();
    cy.get("#btn-cart > .add-to-cart").click();
 });
 
 Cypress.Commands.add("sqa_goToCart", (quantity) => {
+   cy.get(".popup-box-wrap .qty-inp-s").click().clear();
    cy.get(".popup-box-wrap .qty-inp-s").click().type(quantity);
    cy.get(".popup-box-wrap .qty-inp-s").invoke("attr", "value").should("contain", quantity);
    cy.get(".popup-box-wrap .qty-inp-s").should("have.value", quantity);
@@ -28,10 +29,5 @@ Cypress.Commands.add("sqa_payment", (message) => {
    cy.get("#payment_method [type='radio']").check("cod");
    cy.get("#checkout-terms").check();
    cy.get(".btn-next").click();
-   cy.get(".main-content .text-2").should("have.text", message);
-});
-
-Cypress.Commands.add("addToBasket", () => {
-    cy.get(".customers-activity").children(".close").click();
-    cy.get("#btn-cart").children(".add-to-cart").click();
+   cy.get(".main-content .text-2", { timeout: 10000 }).should("have.text", message);
 });

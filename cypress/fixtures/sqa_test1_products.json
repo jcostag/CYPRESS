@@ -1,11 +1,11 @@
 {
   "products": [
     {
-      "product": "Royal London 41003-03",
+      "name": "Royal London 41003-03",
       "quantity": "2"
     },
     {
-      "product": "Citizen Eco-Drive Silver Tone Men",
+      "name": "Citizen Eco-Drive Silver Tone Men",
       "quantity": "3"
     }
   ]

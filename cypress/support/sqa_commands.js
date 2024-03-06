@@ -1,3 +1,5 @@
+const maxTimeout = 10000;
+
 Cypress.Commands.add("sqa_addToCart", (name) => {
    cy.get("a").contains(name).click();
    cy.get(".customers-activity > .close").click();
@@ -29,5 +31,5 @@ Cypress.Commands.add("sqa_payment", (message) => {
    cy.get("#payment_method [type='radio']").check("cod");
    cy.get("#checkout-terms").check();
    cy.get(".btn-next").click();
-   cy.get(".main-content .text-2", { timeout: 10000 }).should("have.text", message);
+   cy.get(".main-content .text-2", { timeout: maxTimeout }).should("have.text", message);
 });
